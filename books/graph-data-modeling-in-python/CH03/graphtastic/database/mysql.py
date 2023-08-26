@@ -22,6 +22,6 @@ def query_mysql(query, password, host='localhost', user='root', database='steam_
     cursor = connection.cursor()
     cursor.execute(query)
     result = cursor.fetchall()
-    connection.close()
+    cursor.close()
     
     return result
